@@ -16,6 +16,8 @@
 
 #include <aws/core/utils/crypto/Factories.h>
 
+#include <aws/core/utils/crypto/openssl/CryptoImpl.h>
+
 #if ENABLE_BCRYPT_ENCRYPTION
     #include <aws/core/utils/crypto/bcrypt/CryptoImpl.h>
 #elif ENABLE_OPENSSL_ENCRYPTION

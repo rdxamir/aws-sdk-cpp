@@ -63,7 +63,7 @@ struct CurlReadCallbackContext
 
 static const char* CURL_HTTP_CLIENT_TAG = "CurlHttpClient";
 
-void SetOptCodeForHttpMethod(CURL* requestHandle, const HttpRequest& request)
+static void SetOptCodeForHttpMethod(CURL* requestHandle, const HttpRequest& request)
 {
     switch (request.GetMethod())
     {

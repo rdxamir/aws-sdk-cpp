@@ -58,7 +58,7 @@ static const char* SIMPLE_DATE_FORMAT_STR = "%Y%m%d";
 
 static const char* v4LogTag = "AWSAuthV4Signer";
 
-Aws::String CanonicalizeRequestSigningString(HttpRequest& request)
+static Aws::String CanonicalizeRequestSigningString(HttpRequest& request)
 {
     request.CanonicalizeRequest();
     Aws::StringStream signingStringStream;

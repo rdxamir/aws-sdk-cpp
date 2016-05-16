@@ -109,7 +109,8 @@ AWSCredentials EnvironmentAWSCredentialsProvider::GetAWSCredentials()
         }
     }
 
-    return credentials;
+
+    return std::move(credentials);
 }
 
 static Aws::String GetBaseDirectory()

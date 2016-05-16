@@ -204,7 +204,7 @@ namespace Aws
                 return AWSCredentials(m_accessKeyId, m_secretAccessKey, m_sessionToken);
             }
 
-        private:
+        public:
             Aws::String m_accessKeyId;
             Aws::String m_secretAccessKey;
             Aws::String m_sessionToken;

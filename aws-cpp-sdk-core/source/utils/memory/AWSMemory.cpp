@@ -82,7 +82,7 @@ void* Malloc(const char* allocationTag, size_t allocationSize)
     }
     else
     {
-        rawMemory = malloc(allocationSize);
+        rawMemory = new char[allocationSize];
     }
 
     return rawMemory;
@@ -103,7 +103,7 @@ void Free(void* memoryPtr)
     }
     else
     {
-        free(memoryPtr);
+        delete[] reinterpret_cast<char*>(memoryPtr);
     }
 }
 
