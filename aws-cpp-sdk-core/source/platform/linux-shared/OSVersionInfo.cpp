@@ -22,13 +22,13 @@ namespace Utils
 
 Aws::String ComputeOSVersionString()
 {
-    Aws::String kernelName = GetSysCommandOutput("uname -s 2>&1");
+    /*Aws::String kernelName = GetSysCommandOutput("uname -s 2>&1");
     Aws::String releaseAndMachineName = GetSysCommandOutput("uname -rm 2>&1");
 
     if(!kernelName.empty())
     {
         return kernelName + "/" + releaseAndMachineName;
-    }
+    }*/
 
     return "non-windows/unknown";
 }

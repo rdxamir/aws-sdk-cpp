@@ -27,8 +27,8 @@ class AWS_CORE_API DefaultRetryStrategy : public RetryStrategy
 {
 public:
 
-    DefaultRetryStrategy(long maxRetries = 10, long scaleFactor = 25, long startPoint = 0) :
-        m_scaleFactor(scaleFactor), m_maxRetries(maxRetries), m_startPoint(startPoint)
+    DefaultRetryStrategy(long maxRetries = 10, long scaleFactor = 25) :
+        m_scaleFactor(scaleFactor), m_maxRetries(maxRetries)
     {}
 
     bool ShouldRetry(const AWSError<CoreErrors>& error, long attemptedRetries) const override;
@@ -38,7 +38,6 @@ public:
 private:
     long m_scaleFactor;
     long m_maxRetries;
-    long m_startPoint;
 };
 
 } // namespace Client
