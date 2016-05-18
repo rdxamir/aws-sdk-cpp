@@ -15,6 +15,7 @@ CXXFLAGS:=$(filter-out -Wsuggest-override,$(CXXFLAGS))
 CXXFLAGS:=$(filter-out -Werror=ignored-qualifiers,$(CXXFLAGS))
 CXXFLAGS:=$(filter-out -Wignored-qualifiers,$(CXXFLAGS))
 CXXFLAGS:=$(filter-out -Wmissing-declarations,$(CXXFLAGS))
+CXXFLAGS:=$(filter-out -fstrict-aliasing,$(CXXFLAGS))
 
 $(SLIB): $(S3OBJS) $(COREOBJS)
 	@echo "AR $@"
